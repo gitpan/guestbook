@@ -1,4 +1,7 @@
-Revision history for Perl script guestbook.
+Revision history for Perl script Guestbook.
+
+0.5 2004/11/14
+ - Revised the code
 
 0.03b 2003/11/23
  - External configuration creator script added

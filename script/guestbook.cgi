@@ -4,7 +4,7 @@
 #################################################################################
 #										#
 #  										#
-#   Guestbook v.0.4							       	#
+#   Guestbook v.0.5							       	#
 #   Copyright (C) 2003-2004 - Steven Schubiger <steven@accognoscere.org>	#
 #   Last changes: 12th November 2004						#
 #										#
@@ -183,50 +183,58 @@ sub guestbook_main {
     if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$ADMIN_INTERFACE_MODE_TAG_INVISIBLE/<input type="hidden" name="admin_interface_mode" value="1">/i;
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$ADMIN_SID_TAG_INVISIBLE/<input type="hidden" name="sid" value="$submit{'admin'}{'security'}{'sid'}">/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$ADMIN_INTERFACE_MODE_TAG_INVISIBLE//i;
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$ADMIN_SID_TAG_INVISIBLE//i;
     }
 
     if (length $submit{'guestbook'}{'new_entry'}{'name'}) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_NAME_SUBMIT/$submit{'guestbook'}{'new_entry'}{'name'}/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_NAME_SUBMIT//i;
     }
 
     if (length $submit{'guestbook'}{'new_entry'}{'email'}) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_EMAIL_SUBMIT/$submit{'guestbook'}{'new_entry'}{'email'}/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_EMAIL_SUBMIT//i;
     }
 
     if (length $submit{'guestbook'}{'new_entry'}{'website'}) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_WEBSITE_SUBMIT/$submit{'guestbook'}{'new_entry'}{'website'}/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_WEBSITE_SUBMIT//i;
     }
 
     if (length $submit{'guestbook'}{'new_entry'}{'message'}) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_MESSAGE_SUBMIT/$submit{'guestbook'}{'new_entry'}{'message'}/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$NEW_ENTRY_MESSAGE_SUBMIT//i;
     }
 
     if ($config{'setting'}{'guestbook'}{'html_mode'} == 1) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$GUESTBOOK_HTML_MODE/$config{'description'}{'guestbook'}{'html_mode_enabled'}/;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$GUESTBOOK_HTML_MODE/$config{'description'}{'guestbook'}{'html_mode_disabled'}/;
     }
 
     if ($config{'setting'}{'guestbook'}{'emoticons_mode'} == 1) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$GUESTBOOK_EMOTICONS_MODE/$config{'description'}{'guestbook'}{'emoticons_mode_enabled'}/;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$GUESTBOOK_EMOTICONS_MODE/$config{'description'}{'guestbook'}{'emoticons_mode_disabled'}/;
     }
 
     if (scalar @status_messages > 0) {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$STATUS_MESSAGES/@status_messages/;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'new_entry_form'} =~ s/\$STATUS_MESSAGES//;
     }
 
@@ -242,7 +250,8 @@ sub guestbook_main {
 
     if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
         $html{'guestbook_main'}{'navigation_status_list'} =~ s/\$ADMIN_INTERFACE_ACCESS_CONTROL/<a href="$config{'url'}{'script'}?action=admin_interface_logout&sid=$submit{'admin'}{'security'}{'sid'}">logout<\/a>/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'navigation_status_list'} =~ s/\$ADMIN_INTERFACE_ACCESS_CONTROL/<a href="$config{'url'}{'script'}?action=admin_interface_login_form&admin_interface_mode=1">login<\/a>/i;
     }
 
@@ -257,9 +266,11 @@ sub guestbook_main {
     my %message = ();
     if ($counter_gb_entries <= 0) {
         $message{'guestbook'}{'counter_guestbook_entries'} = $config{'description'}{'guestbook'}{'counter_none_guestbook_entries'};
-    } elsif ($counter_gb_entries == 1) {
+    } 
+    elsif ($counter_gb_entries == 1) {
         $message{'guestbook'}{'counter_guestbook_entries'} = "1 $config{'description'}{'guestbook'}{'counter_guestbook_entry'}";
-    } elsif ($counter_gb_entries > 1) {
+    } 
+    elsif ($counter_gb_entries > 1) {
         $message{'guestbook'}{'counter_guestbook_entries'} = "$counter_gb_entries $config{'description'}{'guestbook'}{'counter_guestbook_entries'}";
     }
 
@@ -273,7 +284,8 @@ sub guestbook_main {
 
     if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
         $html{'guestbook_main'}{'navigation_status_list'} =~ s/\$ADMIN_INTERFACE_NAVIGATION_LINKS/$html{'admin_interface'}{'navigation_links'}/i;
-    } else {
+    } 
+    else {
         $html{'guestbook_main'}{'navigation_status_list'} =~ s/\$ADMIN_INTERFACE_NAVIGATION_LINKS//;
     }
     delete $html{'admin_interface'}{'navigation_links'};
@@ -298,7 +310,7 @@ sub guestbook_main {
         $gb_entry_index++;
     }
     $gb_entry_index--;
-	
+
     while ( ($count_gb_entries_displayed < $config{'setting'}{'guestbook'}{'entries_max_page'}) && (! eof (FILE_GB_ENTRIES) ) ) {
         my $gb_single_entry = <FILE_GB_ENTRIES>;
         next unless $gb_single_entry =~ /\w+/;
@@ -322,7 +334,8 @@ sub guestbook_main {
 
         if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$ADMIN_GB_ENTRIES_CONTROL_LINKS/$html{'admin_gb_entries'}{'control_links'}/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$ADMIN_GB_ENTRIES_CONTROL_LINKS//i;
         }
         delete $html{'admin_gb_entries'}{'control_links'};
@@ -343,7 +356,8 @@ sub guestbook_main {
 
         if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$ADMIN_GB_ENTRY_PING_LINK/$html{'admin'}{'link_ping'}/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$ADMIN_GB_ENTRY_PING_LINK//i;
         }
         delete $html{'admin'}{'link_ping'};
@@ -367,7 +381,8 @@ sub guestbook_main {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT/$gb_entry_comment/i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT_FOOTER/$config{'description'}{'guestbook'}{'entry_comment_footer'}/i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT_TIME/$gb_entry_comment_time[3].$gb_entry_comment_time[4].$gb_entry_comment_time[5] - $gb_entry_comment_time[2].$gb_entry_comment_time[1] $gb_entry_comment_time[9]/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT//i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT_FOOTER//i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_COMMENT_TIME//i;
@@ -378,11 +393,12 @@ sub guestbook_main {
 
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_EDIT_STATUS_FOOTER/$config{'description'}{'guestbook'}{'entry_edit_footer'}/i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_EDIT_STATUS_TIME/$gb_entry_time[3].$gb_entry_time[4].$gb_entry_time[5] - $gb_entry_time[2].$gb_entry_time[1] $gb_entry_time[9]/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_EDIT_STATUS_FOOTER//i;
             $html{'guestbook_main'}{'entries_list_local'} =~ s/\$GB_ENTRY_EDIT_STATUS_TIME//i;
         }
-		
+
         print $html{'guestbook_main'}{'entries_list_local'};
     }
     delete $html{'guestbook_main'}{'entries_list_local'};
@@ -394,34 +410,35 @@ sub guestbook_main {
 
     if ($submit{'general'}{'guestbook_entry'}{'start_id'} == 0) {
         $html{'guestbook_main'}{'navigate_links'} =~ s/\$GB_ENTRIES_NAVIGATE_LINK_PREVIOUS/$config{'description'}{'guestbook'}{'entries_navigate_link_previous_no_target'}/i;
-    } else {
+    } 
+    else {
         if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
             $html{'guestbook_main'}{'navigate_links'} =~ s/\$GB_ENTRIES_NAVIGATE_LINK_PREVIOUS/<a href="$SCRIPT_URL_INVISIBLE?guestbook_entry_start_id=$count_gb_entries_previous_page&admin_interface_mode=1&sid=$submit{'admin'}{'security'}{'sid'}">$config{'description'}{'guestbook'}{'entries_navigate_link_previous_target'}<\/a>/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'navigate_links'} =~ s/\$GB_ENTRIES_NAVIGATE_LINK_PREVIOUS/<a href="$SCRIPT_URL_INVISIBLE?guestbook_entry_start_id=$count_gb_entries_previous_page">$config{'description'}{'guestbook'}{'entries_navigate_link_previous_target'}<\/a>/i;
         }
     }
 
     if ( ($submit{'general'}{'guestbook_entry'}{'start_id'} + $config{'setting'}{'guestbook'}{'entries_max_page'}) >= $counter_gb_entries) {
         $html{'guestbook_main'}{'navigate_links'} =~     s/\$GB_ENTRIES_NAVIGATE_LINK_NEXT/$config{'description'}{'guestbook'}{'entries_navigate_link_next_no_target'}/i;
-    } else {
+    } 
+    else {
         if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
             $html{'guestbook_main'}{'navigate_links'} =~ s/\$GB_ENTRIES_NAVIGATE_LINK_NEXT/<a href="$SCRIPT_URL_INVISIBLE?guestbook_entry_start_id=$count_gb_entries_next_page&admin_interface_mode=1&sid=$submit{'admin'}{'security'}{'sid'}">$config{'description'}{'guestbook'}{'entries_navigate_link_next_target'}<\/a>/i;
-        } else {
+        } 
+        else {
             $html{'guestbook_main'}{'navigate_links'} =~ s/\$GB_ENTRIES_NAVIGATE_LINK_NEXT/<a href="$SCRIPT_URL_INVISIBLE?guestbook_entry_start_id=$count_gb_entries_next_page">$config{'description'}{'guestbook'}{'entries_navigate_link_next_target'}<\/a>/i;
         }
     }
 
     my $script_name = 'Guestbook v.0.3b';
-    my $author_home_url = 'http://www.accognoscere.org';
+    my $author_home_url = 'http://search.cpan.org/~schubiger';
     $html{'guestbook_main'}{'navigate_links'} =~ s/\$SCRIPT_NAME/$script_name/i;
     $html{'guestbook_main'}{'navigate_links'} =~ s/\$AUTHOR_HOME_URL/$author_home_url/i;
 
     print $html{'guestbook_main'}{'navigate_links'};
     print $html{'guestbook_main'}{'footer'};
-    delete $html{'guestbook_main'}{'navigate_links'};
-    delete $html{'guestbook_main'}{'footer'};
-
     exit (0);
 }
 
@@ -448,7 +465,8 @@ sub guestbook_parse_time {
     my $time_period;
     if ($time[2] <= 12) {
         $time_period = $config{'description'}{'general'}{'time_period_am'};
-    } else {
+    } 
+    else {
         $time_period = $config{'description'}{'general'}{'time_period_pm'};
     }
 
@@ -531,8 +549,6 @@ sub guestbook_emoticons_list {
 
     print "Content-type: text/html\n\n";
     print $html{'guestbook'}{'emoticons_list'};
-    delete $html{'guestbook'}{'emoticons_list'};
-
     exit (0);
 }
 
@@ -661,7 +677,8 @@ sub guestbook_entry_parse {
     if ($parsing_mode_add_1 eq 'parse_subvalue_sep') {
         if ($parsing_mode eq 'load' || $parsing_mode eq 'load_form') {
             $string =~ s/asc01/$config{'setting'}{'guestbook'}{'dbase_subvalue_separator'}/ig;
-        } elsif ($parsing_mode eq 'save') {
+        } 
+        elsif ($parsing_mode eq 'save') {
             $string =~ s/$config{'setting'}{'guestbook'}{'dbase_subvalue_separator'}/asc01/ig;
         }
     }
@@ -676,11 +693,13 @@ sub guestbook_entry_parse {
         $string =~ s/\n/$html_breakline/g;
 
         $string =~ s/$config{'setting'}{'guestbook'}{'dbase_value_separator'}/asc00/ig;
-    } elsif ($parsing_mode eq 'load_form') {
+    } 
+    elsif ($parsing_mode eq 'load_form') {
         $string =~ s/$config{'setting'}{'guestbook'}{'html_breakline'}/\n/ig;
 
         $string =~ s/asc00/$config{'setting'}{'guestbook'}{'dbase_value_separator'}/ig;
-    } elsif ($parsing_mode eq 'load') {
+    } 
+    elsif ($parsing_mode eq 'load') {
         $string =~ s/asc00/$config{'setting'}{'guestbook'}{'dbase_value_separator'}/ig;
     }
 
@@ -753,7 +772,8 @@ sub guestbook_notifying_email {
 
             $email_recipient_address = $config{'setting'}{'admin'}{'email_adress'};
             $email_subject = $config{'setting'}{'notifying_email'}{'email_subject'}{'admin_new_user_entry'};
-        } elsif ($notifying_email_mode eq 'notify_user_admin_comment') {
+        } 
+        elsif ($notifying_email_mode eq 'notify_user_admin_comment') {
             $email_notifying_message = &guestbook_parse_notifying_email_template ($config{'template'}{'notifying_email'}{'user_admin_comment'}, 14);
             $email_notifying_message =~ s/(.{72})[ \-]/$1\n/g;
             $email_notifying_message =~ s/\$ADMIN_NAME/$config{'setting'}{'admin'}{'name'}/i;
@@ -763,10 +783,19 @@ sub guestbook_notifying_email {
         }
 
         open (SENDMAIL_PIPE, "| $config{'path'}{'sendmail'} -t") or &general_error ("$config{'path'}{'sendmail'} -t", $!, 1);
-        print SENDMAIL_PIPE "From: $email_sender_adress\n";
-        print SENDMAIL_PIPE "To: $email_recipient_address\n";
-        print SENDMAIL_PIPE "Subject: $email_subject\n\n";
-        print SENDMAIL_PIPE $email_notifying_message;
+
+	select (SENDMAIL_PIPE);
+
+        print <<"SENDMAIL_PIPE";
+From: $email_sender_adress
+To: $email_recipient_address
+Subject: $email_subject
+
+$email_notifying_message
+SENDMAIL_PIPE
+
+	select (STDOUT);
+
         close (SENDMAIL_PIPE) or &general_error ("$config{'path'}{'sendmail'} -t", $!, 1);
     }
 }
@@ -817,19 +846,22 @@ sub admin_interface_login_form {
 
     if (length $submit{'admin'}{'interface_login_form'}{'uid'} > 0) {
         $html{'admin'}{'interface_login_form'} =~ s/\$LOGIN_UID_SUBMIT/$submit{'admin'}{'interface_login_form'}{'uid'}/i;
-    } else {
+    } 
+    else {
         $html{'admin'}{'interface_login_form'} =~ s/\$LOGIN_UID_SUBMIT//i;
     }
 
     if (length $submit{'admin'}{'interface_login_form'}{'password'} > 0) {
         $html{'admin'}{'interface_login_form'} =~ s/\$LOGIN_PASSWORD_SUBMIT/$submit{'admin'}{'interface_login_form'}{'password'}/i;
-    } else {
+    } 
+    else {
         $html{'admin'}{'interface_login_form'} =~ s/\$LOGIN_PASSWORD_SUBMIT//i;
     }
 
     if (scalar @status_messages > 0) {
         $html{'admin'}{'interface_login_form'} =~ s/\$STATUS_MESSAGES/@status_messages/i;
-    } else {
+    } 
+    else {
         $html{'admin'}{'interface_login_form'} =~ s/\$STATUS_MESSAGES//i;
     }
 
@@ -837,8 +869,6 @@ sub admin_interface_login_form {
 
     print "Content-type: text/html\n\n";
     print $html{'admin'}{'interface_login_form'};
-    delete $html{'admin'}{'interface_login_form'};
-
     exit (0);
 }
 
@@ -858,7 +888,8 @@ sub admin_interface {
         &guestbook_main();
         &guestbook_navigation_status_list();
         &guestbook_entries_list();
-    } else {
+    } 
+    else {
         my @error_messages;
 
 	   if ($submit{'admin'}{'interface_login_form'}{'uid'} ne $config{'setting'}{'admin'}{'name'} or $submit{'admin'}{'interface_login_form'}{'password'} ne $config{'setting'}{'admin'}{'interface_password'}) {
@@ -885,7 +916,7 @@ sub admin_interface_logout {
     &admin_validate_session();
 
     open (SESSION, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
-    close (SESSION) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", 1);
+    close (SESSION) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", 1);
 
     &guestbook_main();
 }
@@ -939,7 +970,8 @@ sub admin_edit_banned_words_form {
 
     if (length $submit{'admin'}{'edit_banned_words'}{'new_banned_word'} > 0) {
         $html{'admin_edit_banned_words_form'}{'header'} =~ s/\$NEW_BANNED_WORD/$submit{'admin'}{'edit_banned_words'}{'new_banned_word'}/i;
-    } else {
+    } 
+    else {
         $html{'admin_edit_banned_words_form'}{'header'} =~ s/\$NEW_BANNED_WORD//i;
     }
 
@@ -959,15 +991,14 @@ sub admin_edit_banned_words_form {
 
     if (length $status_message > 0) {
         $html{'admin_edit_banned_words_form'}{'footer'} =~ s/\$STATUS_MESSAGE/$status_message/i;
-    } else {
+    } 
+    else {
         $html{'admin_edit_banned_words_form'}{'footer'} =~ s/\$STATUS_MESSAGE//i;
     }
 
     $html{'admin_edit_banned_words_form'}{'footer'} = &general_parse_buttons ($html{'admin_edit_banned_words_form'}{'footer'}, "$config{'dir'}{'buttons'}/$config{'image'}{'button'}{'general'}{'submit'}");
 
     print $html{'admin_edit_banned_words_form'}{'footer'};
-    delete $html{'admin_edit_banned_words_form'}{'footer'};
-
     exit (0);
 }
 
@@ -1004,7 +1035,8 @@ sub admin_edit_banned_words_submit {
     if ( $submit{'admin'}{'edit_banned_words'}{'action'} eq 'add' && $submit{'admin'}{'edit_banned_words'}{'new_banned_word'} ne '') {
         push (@banned_words_2, $submit{'admin'}{'edit_banned_words'}{'new_banned_word'});
         push (@status_messages, $config{'message'}{'admin_edit_banned_words'}{'submit_new_banned_word_successful'});
-    } elsif ($submit{'admin'}{'edit_banned_words'}{'action'} eq 'del' && $submit{'admin'}{'edit_banned_words'}{'del_banned_word'} ne '') {
+    } 
+    elsif ($submit{'admin'}{'edit_banned_words'}{'action'} eq 'del' && $submit{'admin'}{'edit_banned_words'}{'del_banned_word'} ne '') {
         foreach my $banned_word (@banned_words_2) {
             if ($banned_word eq $submit{'admin'}{'edit_banned_words'}{'del_banned_word'}) {
                 splice (@banned_words_2, $banned_words_index, 1);
@@ -1012,7 +1044,7 @@ sub admin_edit_banned_words_submit {
                 push (@status_messages, $config{'message'}{'admin_edit_banned_words'}{'delete_submit_banned_word_successful'});
                 last;
             }
-	
+
             $banned_words_index++;
         }
     }
@@ -1028,9 +1060,9 @@ sub admin_edit_banned_words_submit {
         }
     }
 
-    open (BANNED_WORDS, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}", $!, 1);
+    open (BANNED_WORDS, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}", $!, 1);
     print BANNED_WORDS "$banned_words";
-    close (BANNED_WORDS) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}", $!, 1);
+    close (BANNED_WORDS) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_words'}", $!, 1);
 
     &admin_edit_banned_words_form (@status_messages);
 }
@@ -1084,7 +1116,8 @@ sub admin_edit_banned_ips_form {
 
     if ( defined ($submit{'admin'}{'edit_banned_ips'}{'new_banned_ip'}) ) {
         $html{'admin_edit_banned_ips_form'}{'header'} =~ s/\$NEW_BANNED_IP_SUBMIT/$submit{'admin'}{'edit_banned_ips'}{'new_banned_ip'}/i;
-    } else {
+    } 
+    else {
         $html{'admin_edit_banned_ips_form'}{'header'} =~ s/\$NEW_BANNED_IP_SUBMIT//i;
     }
 
@@ -1101,15 +1134,14 @@ sub admin_edit_banned_ips_form {
 
     if ( defined ($status_message) ) {
         $html{'admin_edit_banned_ips_form'}{'footer'} =~ s/\$STATUS_MESSAGES/$status_message/i;
-    } else {
+    } 
+    else {
         $html{'admin_edit_banned_ips_form'}{'footer'} =~ s/\$STATUS_MESSAGES//i;
     }
 
     $html{'admin_edit_banned_ips_form'}{'footer'} = &general_parse_buttons ($html{'admin_edit_banned_ips_form'}{'footer'}, "$config{'dir'}{'buttons'}/$config{'image'}{'button'}{'general'}{'submit'}");
 
     print $html{'admin_edit_banned_ips_form'}{'footer'};
-    delete $html{'admin_edit_banned_ips_form'}{'footer'};
-
     exit (0);
 }
 
@@ -1154,7 +1186,8 @@ sub admin_edit_banned_ips_submit {
         push (@banned_ips_2, $submit{'admin'}{'edit_banned_ips'}{'new_banned_ip'});
 
         push (@status_messages, $config{'message'}{'admin_edit_banned_ips'}{'new_banned_ip_submit_successful'});
-    } elsif ( $submit{'admin'}{'edit_banned_ips'}{'action'} eq 'del' && $submit{'admin'}{'edit_banned_ips'}{'del_banned_ip'} ne '') {
+    } 
+    elsif ( $submit{'admin'}{'edit_banned_ips'}{'action'} eq 'del' && $submit{'admin'}{'edit_banned_ips'}{'del_banned_ip'} ne '') {
         foreach my $banned_ip (@banned_ips_2) {
             if ($banned_ip eq $submit{'admin'}{'edit_banned_ips'}{'del_banned_ip'}) {
                 splice (@banned_ips_2, $banned_ips_index, 1);
@@ -1178,9 +1211,9 @@ sub admin_edit_banned_ips_submit {
         }
     }
 
-    open (BANNED_IPS, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}", $!, 1);
+    open (BANNED_IPS, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}", $!, 1);
     print BANNED_IPS $banned_ips;
-    close (BANNED_IPS) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}", $!, 1);
+    close (BANNED_IPS) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'banned_ips'}", $!, 1);
 
     &admin_edit_banned_ips_form (@status_messages);
 }
@@ -1227,8 +1260,6 @@ sub admin_edit_gb_entry_form {
 
     print "Content-type: text/html\n\n";
     print $html{'admin_edit_gb_entry'}{'form'};
-    delete $html{'admin_edit_gb_entry'}{'form'};
-
     exit (0);
 }
 
@@ -1255,9 +1286,9 @@ sub admin_edit_gb_entry_submit {
         }
     }
 
-    open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+    open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
     print FILE_GB_ENTRIES @gb_entries;
-    close (FILE_GB_ENTRIES) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+    close (FILE_GB_ENTRIES) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
 
     &guestbook_main();
 }
@@ -1296,8 +1327,6 @@ sub admin_comment_gb_entry_form {
 
     print "Content-type: text/html\n\n";
     print $html{'admin_comment_gb_entry'}{'form'};
-    delete $html{'admin_comment_gb_entry'}{'form'};
-
     exit (0);
 }
 
@@ -1320,7 +1349,8 @@ sub admin_comment_gb_entry_submit {
 
             if ($submit{'admin'}{'comment_gb_entry'}{'comment'} =~ /\w+/) {
                 $gb_entry[7] = "$submit{'admin'}{'comment_gb_entry'}{'comment'}" . $config{'setting'}{'guestbook'}{'dbase_subvalue_separator'} . time;
-            } else { $gb_entry[7] = '' }
+            } 
+            else { $gb_entry[7] = '' }
 
             my $gb_entry;
             foreach my $item (@gb_entry) { $gb_entry .= "$item$config{'setting'}{'guestbook'}{'dbase_value_separator'}" }
@@ -1331,9 +1361,9 @@ sub admin_comment_gb_entry_submit {
         }
     }
 
-    open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+    open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
     print FILE_GB_ENTRIES @gb_entries;
-    close (FILE_GB_ENTRIES) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+    close (FILE_GB_ENTRIES) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
 
     &guestbook_notifying_email ('notify_user_admin_comment', $gb_entry_email_adress);
 
@@ -1355,12 +1385,13 @@ sub admin_delete_gb_entry {
 
         splice (@gb_entries, $submit{'general'}{'guestbook_entry'}{'id'}, 1);
 
-        open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+        open (FILE_GB_ENTRIES, ">$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
         print FILE_GB_ENTRIES @gb_entries;
-        close (FILE_GB_ENTRIES) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
+        close (FILE_GB_ENTRIES) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'guestbook'}{'entries'}", $!, 1);
 
         &guestbook_main();
-    } else {
+    } 
+    else {
         my @gb_entries = &general_parse_file_data_array ($config{'file'}{'guestbook'}{'entries'});
 
         my $gb_single_entry = @gb_entries[$submit{'general'}{'guestbook_entry'}{'id'}];
@@ -1402,7 +1433,8 @@ sub admin_delete_gb_entry {
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT/$gb_entry_comment/i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT_FOOTER/$config{'description'}{'guestbook'}{'entry_comment_footer'}/i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT_TIME/$gb_entry_comment_time[3].$gb_entry_comment_time[4].$gb_entry_comment_time[5] - $gb_entry_comment_time[2].$gb_entry_comment_time[1] $gb_entry_comment_time[9]/i;
-        } else {
+        } 
+        else {
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT//i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT_FOOTER//i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_COMMENT_TIME//i;
@@ -1413,7 +1445,8 @@ sub admin_delete_gb_entry {
 
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_EDIT_STATUS_FOOTER/$config{'description'}{'guestbook'}{'entry_edit_footer'}/i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_EDIT_STATUS_TIME/$gb_entry_time[3].$gb_entry_time[4].$gb_entry_time[5] - $gb_entry_time[2].$gb_entry_time[1] $gb_entry_time[9]/i;
-        } else {
+        } 
+        else {
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_EDIT_STATUS_FOOTER//i;
             $html{'admin_delete_gb_entry'}{'verification_form'} =~ s/\$GB_ENTRY_EDIT_STATUS_TIME//i;
         }
@@ -1422,8 +1455,6 @@ sub admin_delete_gb_entry {
 
         print "Content-type: text/html\n\n";
         print $html{'admin_delete_gb_entry'}{'verification_form'};
-        delete $html{'admin_delete_gb_entry'}{'verification_form'};
-
         exit (0);
     }
 }
@@ -1442,18 +1473,18 @@ sub admin_create_session {
     my $random_digit_2 = rand ($config{'setting'}{'admin'}{'session_random_digit_2'}) + 1;
     $submit{'admin'}{'security'}{'sid'} = $random_digit_1 * $random_digit_2;
 
-    open (ADMIN_SESSION, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+    open (ADMIN_SESSION, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
     print ADMIN_SESSION "$current_time$config{'setting'}{'guestbook'}{'dbase_value_separator'}$submit{'admin'}{'security'}{'sid'}";
-    close (ADMIN_SESSION) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+    close (ADMIN_SESSION) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
 }
 
 
 
 
 sub admin_validate_session {
-   open (ADMIN_SESSION, "<$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+   open (ADMIN_SESSION, "<$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
    my $admin_session_entry = <ADMIN_SESSION>;
-   close (ADMIN_SESSION) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+   close (ADMIN_SESSION) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
 
    chomp ($admin_session_entry);
    my ($admin_saved_session_time, $admin_saved_session_sid) = split (/$config{'setting'}{'guestbook'}{'dbase_value_separator'}/, $admin_session_entry);
@@ -1463,7 +1494,8 @@ sub admin_validate_session {
 
    if ( ($submit{'admin'}{'security'}{'sid'} == $admin_saved_session_sid) && ($runtime < $config{'setting'}{'admin'}{'session_runout_time_min'}) ) {
         &admin_renew_session();
-   } else {
+   } 
+   else {
         &admin_interface_login_form ($config{'message'}{'admin'}{'session_invalid'});
    }
 }
@@ -1472,18 +1504,18 @@ sub admin_validate_session {
 
 
 sub admin_renew_session {
-    open (ADMIN_SESSION, "<$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+    open (ADMIN_SESSION, "<$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
     my $admin_session_entry = <ADMIN_SESSION>;
-    close (ADMIN_SESSION) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+    close (ADMIN_SESSION) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
 
     my @admin_session_entry = split (/$config{'setting'}{'guestbook'}{'dbase_value_separator'}/, $admin_session_entry);
     my $current_time = time;
     $admin_session_entry[0] = $current_time;
     $admin_session_entry = $admin_session_entry[0] . $config{'setting'}{'guestbook'}{'dbase_value_separator'} . $admin_session_entry[1];
 
-    open (ADMIN_SESSION, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}");
+    open (ADMIN_SESSION, ">$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}") or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}");
     print ADMIN_SESSION $admin_session_entry;
-    close (ADMIN_SESSION) || &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
+    close (ADMIN_SESSION) or &general_error ("$config{'dir'}{'data'}/$config{'file'}{'admin'}{'session_entries'}", $!, 1);
 }
 
 
@@ -1496,9 +1528,9 @@ sub admin_renew_session {
 sub admin_ping_gb_entry {
     &admin_validate_session();
 
-    open (PING, "$config{'path'}{'ping'} -c1 $submit{'admin'}{'ping_gb_entry'}{'gb_entry_ip'} |") || &general_error ("$config{'path'}{'ping'}", $!, 1);
+    open (PING, "$config{'path'}{'ping'} -c1 $submit{'admin'}{'ping_gb_entry'}{'gb_entry_ip'} |") or &general_error ("$config{'path'}{'ping'}", $!, 1);
     my @ping_results = <PING>;
-    close (PING) || &general_error ("$config{'path'}{'ping'}", $!, 1);
+    close (PING) or &general_error ("$config{'path'}{'ping'}", $!, 1);
 
     my $guestbook_entry_author_status;
     $guestbook_entry_author_status = $config{'description'}{'guestbook'}{'entry_author_online_status'};
@@ -1518,8 +1550,6 @@ sub admin_ping_gb_entry {
 
     print "Content-type: text/html\n\n";
     print $html{'admin'}{'ping_user'};
-    delete $html{'admin'}{'ping_user'};
-
     exit (0);
 
 }
@@ -1538,9 +1568,7 @@ sub admin_ping_gb_entry {
 #=======================================
 
 sub general_error {
-    my $error_path = $_[0];
-    my $error_status = $_[1];
-    my $print_mime_header = $_[2];
+    my ($error_path, $error_status, $print_mime_header) = @_;
 
     $html{'general'}{'error'} = &general_parse_template ($config{'template'}{'general'}{'error'});
 
@@ -1552,8 +1580,6 @@ sub general_error {
         print "Content-type: text/html\n\n";
     }
     print $html{'general'}{'error'};
-    delete $html{'general'}{'error'};
-
     exit (0);
 }
 
@@ -1572,7 +1598,8 @@ sub general_parse_site_titles {
     my $site_title;
     if ($submit{'general'}{'mode'}{'admin_interface'} == 1) {
         $site_title = $config{'setting'}{'admin'}{'site_title'};
-    } else {
+    } 
+    else {
         $site_title = $config{'setting'}{'guestbook'}{'site_title'};
     }
 
@@ -1591,14 +1618,14 @@ sub general_parse_site_titles {
 sub general_parse_file_data_string {
     my $file_data = shift (@_);
 
-    open (FILE_DATA, "<$config{'dir'}{'data'}/$file_data") || &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
+    open (FILE_DATA, "<$config{'dir'}{'data'}/$file_data") or &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
 
     my $file_data_content;
     while (! eof(FILE_DATA) ) {
         $file_data_content .= <FILE_DATA>;
     }
 
-    close (FILE_DATA) || &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
+    close (FILE_DATA) or &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
 
     return $file_data_content;
 }
@@ -1613,9 +1640,9 @@ sub general_parse_file_data_string {
 sub general_parse_file_data_array {
     my $file_data = shift (@_);
 
-    open (FILE_DATA, "<$config{'dir'}{'data'}/$file_data") || &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
+    open (FILE_DATA, "<$config{'dir'}{'data'}/$file_data") or &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
     my @file_data_content = <FILE_DATA>;
-    close (FILE_DATA) || &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
+    close (FILE_DATA) or &general_error ("$config{'dir'}{'data'}/$file_data", $!, 1);
 
     return @file_data_content;
 }
@@ -1632,11 +1659,11 @@ sub general_parse_template {
 
     my $template_html;
 
-    open (TEMPLATE, "<$config{'dir'}{'templates'}/$template") || &general_error ("$config{'dir'}{'templates'}/$template", $!, 1);
+    open (TEMPLATE, "<$config{'dir'}{'templates'}/$template") or &general_error ("$config{'dir'}{'templates'}/$template", $!, 1);
     while (! eof(TEMPLATE) ) {
         $template_html .= <TEMPLATE>;
     }
-    close (TEMPLATE) || &general_error ("$config{'dir'}{'templates'}/$template", $!, 1);
+    close (TEMPLATE) or &general_error ("$config{'dir'}{'templates'}/$template", $!, 1);
 
     return $template_html;
 }
@@ -1653,7 +1680,8 @@ sub general_parse_buttons {
 
     if (scalar @absolute_path_button == 1) {
         $string =~ s/\$ABSOLUTE_PATH_BUTTON/$absolute_path_button[0]/i;
-    } elsif (scalar @absolute_path_button == 3) {
+    } 
+    elsif (scalar @absolute_path_button == 3) {
         $string =~ s/\$ABSOLUTE_PATH_BUTTON_1/$absolute_path_button[0]/i;
         $string =~ s/\$ABSOLUTE_PATH_BUTTON_2/$absolute_path_button[1]/i;
         $string =~ s/\$ABSOLUTE_PATH_BUTTON_3/$absolute_path_button[2]/i;
@@ -1665,17 +1693,16 @@ sub general_parse_buttons {
 
 
 
-
-
-__END__
-
-
 BEGIN {
-    $VERSION = '0.4';
+    $VERSION = '0.5';
     $AUTHOR = 'Steven Schubiger';
     $AUTHOR_EMAIL = 'steven@accognoscere.org' ;
 }
 
+
+
+
+__END__
 
 =head1 NAME
 

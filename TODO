@@ -1,4 +1,3 @@
-v. 0.04a
 - Email notification, administrator -> user (when commenting),
   allow the embedding of a placeholder which refers to the script url (& perhaps a
   reference to the entry.)

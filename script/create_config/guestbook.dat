@@ -26,12 +26,12 @@ templates = templates
 #-------------------------
 # Path: Buttons directory.
 #-------------------------
-buttons = http://www.server.com/cgi-bin/guestbook/images/buttons
+buttons = http://www.server.com/cgi-bin/images/guestbook/buttons
 
 #---------------------------
 # Path: Emoticons directory.
 #---------------------------
-emoticons = http://www.server.com/cgi-bin/guestbook/images/emoticons
+emoticons = http://www.server.com/cgi-bin/images/guestbook/emoticons
 
 
 
@@ -725,7 +725,7 @@ entries_max_page = 4
 #-----------------------------------------------------------------
 # Notifying email: The email adress of the notifying mails sender.
 #-----------------------------------------------------------------
-sender = info@server.net
+sender = info@server.com
 
 
 # ................................

@@ -1,6 +1,6 @@
 --- #YAML:1.0
-module_name: guestbook
-dist_version_from: distribution/guestbook.cgi
+module_name: Guestbook
+dist_version_from: script/guestbook.cgi
 installdirs: site
 requires:
 distribution_type: script

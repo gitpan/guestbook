@@ -54,7 +54,7 @@ my (%config_setting, $identifier, $level_identifier,
 
 my $config_file_in = 'guestbook.dat';
 my $config_file_out = '../guestbook.cfg';
-my $template_create_config = 'template_create_config.html';
+my $template_create_config = 'create_config.html';
 
 
 &create_config();
