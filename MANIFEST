@@ -1,6 +1,7 @@
-HISTORY
+Changes
 LICENSE
 MANIFEST
+META.yml
 README
 TODO
 distribution/create_config/create_config.pl
@@ -11,7 +12,6 @@ distribution/data/admin_banned_words.dat
 distribution/data/admin_session.dat
 distribution/data/gb_entries.dat
 distribution/data/gb_entries_track_spam.dat
-distribution/guestbook.cfg
 distribution/guestbook.cgi
 distribution/images/buttons/admin_comment.gif
 distribution/images/buttons/admin_comment_entry.gif

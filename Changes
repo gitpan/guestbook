@@ -1,0 +1,27 @@
+Revision history for Perl script guestbook.
+
+0.03b 2003/11/23
+ - External configuration creator script added
+ - Configuration file splitted in sections/subsections
+ - Extensive user HTML manual & reference written
+ - Changeable ASCII-file value-separator
+ - Parse the CGI-environment "on-demand"
+ - Revised source code & comments
+ - Graphic forms button supportment
+ - Admin delete guestbook entry -
+   verification mode added
+
+0.02a 2003/01/23
+ - Revised the admin interface
+ - Dynamic HTML templates implementation
+
+0.01a 2001/03/18
+ - Separated config file implemented
+ - Implemented basic I/O functions to access ASCII files
+ - Static HTML implemented
+ - Admin interface implemented
+ - Admin session function implemented
+ - Edit, comment & delete functions implemented
+ - Ban words & IP's functions implemented
+ - Emoticons & HTML mode implemented
+
