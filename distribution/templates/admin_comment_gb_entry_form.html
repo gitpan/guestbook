@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME - $SITE_TITLE - comment guestbook entry</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<script language=javascript>
+function openwindow(url,height,width)
+{										window1=window.open(url,null,"height="+height+",width="+width+",status=yes,toolbar=no,menubar=no,location=no");window1.focus();
+
+}
+</script>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+	<form action="$SCRIPT_URL_INVISIBLE" method="post">
+	<table border="0" width="436">
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td width="317">
+        		<input type="hidden" name="action" value="admin_comment_gb_entry_submit">
+        		<input type="hidden" name="admin_interface_mode" value="1">
+        		<input type="hidden" name="sid" value="$SID_INVISIBLE">
+        		<input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID">
+      		</td>
+    	</tr>
+    	<tr>
+      		<td height="198" valign=top width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Comment</font></td>
+      		<td height="198" width="317">
+        		
+        <textarea cols="40" rows="12" name=submit_admin_comment_gb_entry_comment>$GB_ENTRY_COMMENT</textarea>
+        	</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">&nbsp;</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">&nbsp;</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">
+        		<input type="image" src="$ABSOLUTE_PATH_BUTTON">
+      		</td>
+    	</tr>
+    	<!--START: DO NOT MODIFY THE TAG "ADMIN_NAVIGATE_LINKS"! -->
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td width="317"></td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+
+      <td width="317"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a 							href="javascript:history.back()">return</a></font>
+      </td>
+    	</tr>
+	</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,555 @@
+<html>
+
+<head>
+
+<title>User manual - Steven's guestbook - troubleshooting</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#666666" vlink="#666666" alink="#666666">
+
+<table width="100%" border="0">
+
+  <tr>
+
+    <td width="5%">&nbsp;</td>
+
+    <td width="95%">&nbsp;</td>
+
+  </tr>
+
+  <tr>
+
+    <td width="5%">&nbsp;</td>
+
+    <td width="95%"> 
+      <table width="67%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td colspan="5"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b><font color="#000000">Troubleshooting</font></b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"> 
+            <p><br>
+              <br>
+            </p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="18"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="top_overview"></a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Overview</b></font></td>
+          <td colspan="3" height="18"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Webserver 
+            errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">01.) 
+            <a href="#webserver_error_not_found">&quot;not found&quot;</a></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">02.) 
+            <a href="#webserver_error_internal_server">&quot;internal server error&quot;</a></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">03.) 
+            <a href="#webserver_error_site_cannot_be_displayed">&quot;the site 
+            cannot be displayed&quot;</a></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td colspan="3"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Filename- 
+            &amp; path errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%" height="18">&nbsp;</td>
+          <td width="9%" height="18">&nbsp;</td>
+          <td width="1%" height="18">&nbsp;</td>
+          <td colspan="2" height="18"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">04.) 
+            <a href="#file_path_error_no_such_file_or_dir">&quot;no such file 
+            or directory&quot; error</a></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td colspan="3"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Admin 
+            interface errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">05.) 
+            <a href="#admin_interface_error_login_denied">interface login denied 
+            or &quot;no access&quot;</a></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="2">Errors</font></b></font></td>
+          <td colspan="3"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Webserver 
+            errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="webserver_error_not_found"></a>01.) 
+            &quot;not found&quot;<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Screenshot:</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><img src="images/screenshots/webserver_not_found_error.jpg" width="275" height="87"></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">This 
+            indicates most often that the shebang line (<code><font size="2">#!</font></code> 
+            - the first line within a script) hasn't been adjusted i.e. the perl 
+            interpreter path doesn't point to the location of the installed perl 
+            interpreter.</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="webserver_error_internal_server"></a>02.) 
+            &quot;internal server error&quot;<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Screenshot:</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><img src="images/screenshots/webserver_internal_server_error.jpg" width="332" height="115"></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Either 
+            the &quot;ScriptAlias&quot; directive (within your Apache HTTPD configuration), 
+            which controls the execution of CGI scripts, - for example<code>: 
+            </code></font><code><font size="2">ScriptAlias &quot;E:/www/cgi-bin/&quot;</font><font size="1"> 
+            - <font face="Verdana, Arial, Helvetica, sans-serif">hasn't been adjusted 
+            to the correct path which contains the CGI scripts<b><br>
+            <br>
+            or</b> <br>
+            <br>
+            the script &amp; its belonging files haven't been given the right 
+            permissions.</font></font></code></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="webserver_error_site_cannot_be_displayed"></a> 
+            03.) &quot;the site cannot be displayed&quot;<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Ensure 
+            that the string-variable <code><font size="2">$script_url</font></code> 
+            within your configuration file has been adjusted to match the absolute 
+            URL of the location of the script within the internet.</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%" height="18">&nbsp;</td>
+          <td width="9%" height="18">&nbsp;</td>
+          <td width="1%" height="18">&nbsp;</td>
+          <td width="0%" height="18">&nbsp;</td>
+          <td width="81%" height="18">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td colspan="3"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Filename- 
+            &amp; path errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="file_path_error_no_such_file_or_dir"></a>04.) 
+            &quot;no such file or directory&quot; error<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Most 
+            likely you've changed the name and/or the location of a certain file 
+            and/or directory and did not subsequently update the entry within 
+            the configuration file.<br>
+            <br>
+            Be also aware that the standard path of ping isn't valid on win32-systems; 
+            sendmail is per se not installed; so examine those two points carefully 
+            too.</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td colspan="3"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Admin 
+            interface errors</b></font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="admin_interface_error_login_denied"></a>05.) 
+            interface login denied or &quot;no access&quot;<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Either 
+            your submitted user and/or password are constantly being different 
+            from the configured ones<br>
+            <br>
+            <b>or</b><br>
+            <br>
+            more likely - the two chosen random digits (which are used to &quot;calculate&quot; 
+            a random admin session-ID) exceed the length of eight characters.</font></td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="9%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td width="0%">&nbsp;</td>
+          <td width="81%">&nbsp;</td>
+        </tr>
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME - $SITE_TITLE - delete guestbook entry</title>
+</head>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+<form method="post" action="$SCRIPT_URL_INVISIBLE">
+	<input type="hidden" name="action" value="admin_delete_gb_entry">
+	<input type="hidden" name="admin_interface_mode" value="1">
+	<input type="hidden" name="sid" value="$SID_INVISIBLE">
+	<input type="hidden" name="admin_delete_gb_entry_final" value="1">
+  	<input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID_INVISIBLE">
+  <table width="367" border="0">
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Do
+        you really want to delete the selected entry?</font></td>
+    </tr>
+    <tr>
+      <td width="27" height="39">&nbsp;</td>
+      <td height="39" width="290">&nbsp;</td>
+      <td width="36" height="39">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td bgcolor="#cccccc" width="290"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_IDENTIFIER
+        posted at $GB_ENTRY_TIME </font></td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27" valign="bottom">&nbsp;</td>
+      <td bgcolor="#cccccc" width="290"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a
+      href="$GB_ENTRY_WEBSITE" target="_blank">$GB_ENTRY_WEBSITE</a></font></td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27" valign="bottom">&nbsp;</td>
+      <td width="290">&nbsp;</td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27" valign="bottom"></td>
+      <td bgcolor="#cccccc" width="290"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_MESSAGE</font></td>
+      <td width="36">&nbsp; </td>
+    </tr>
+    <tr>
+      <td width="27" valign="bottom"></td>
+      <td width="290">&nbsp;</td>
+      <td width="36">&nbsp; </td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td bgcolor="#cccccc" width="290"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>$GB_ENTRY_COMMENT<br>
+        <br>
+        </i>$GB_ENTRY_COMMENT_FOOTER $GB_ENTRY_COMMENT_TIME<i><br>
+        </i></font></td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td bgcolor="#cccccc" width="290"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_EDIT_STATUS_FOOTER
+        $GB_ENTRY_EDIT_STATUS_TIME</font></td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27" height="46">&nbsp;</td>
+      <td width="290" height="46">&nbsp;</td>
+      <td width="36" height="46">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td width="290">
+        <input type="image" src="$ABSOLUTE_PATH_BUTTON">
+      </td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td width="290">&nbsp;</td>
+      <td width="36">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="27">&nbsp;</td>
+      <td width="290"><font face="Arial, Helvetica, sans-serif" size="2"><a href="javascript:history.back()"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">return</font></a></font></td>
+      <td width="36">&nbsp;</td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+v. 0.04a
+- Email notification, administrator -> user (when commenting),
+  allow the embedding of a placeholder which refers to the script url (& perhaps a
+  reference to the entry.)
+- Replacement of the "return" javascript links in favor of CGI-links.
+- Implement the graphic form button support as mode.
+- Concerning UNIX/Linux: Add a flock implementation to supply file locking.
+- SQL support by using the DBI-module.
+

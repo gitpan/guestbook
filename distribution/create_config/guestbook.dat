@@ -1,0 +1,1123 @@
+
+
+#==============================
+# SECTION:          directories
+#==============================
+# Comment:
+# 같같같같
+# Includes paths concerning
+# your directories.
+#
+########
+#$level=1
+#$identifier=dir
+########
+
+#----------------------
+# Path: Data directory.
+#----------------------
+data = data
+
+#--------------------------
+# Path: Template directory.
+#--------------------------
+templates = templates
+
+#-------------------------
+# Path: Buttons directory.
+#-------------------------
+buttons = http://www.server.com/cgi-bin/guestbook/images/buttons
+
+#---------------------------
+# Path: Emoticons directory.
+#---------------------------
+emoticons = http://www.server.com/cgi-bin/guestbook/images/emoticons
+
+
+
+
+
+
+
+
+
+
+# =======================
+# SECTION:          files
+# =======================
+# Comment:
+# 같같같같
+# Includes the names
+# of data files.
+#
+########
+#$level=1
+#$identifier=file
+########
+
+
+
+
+# ***************************
+# SUBSECTION:       guestbook
+# ***************************
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# the storage of guestbook data.
+#
+########
+#$level=2
+#$identifier=guestbook
+########
+
+#-----------------------------
+# Filename: Guestbook entries.
+#-----------------------------
+entries = gb_entries.dat
+
+#----------------------------------------
+# Filename: Guestbook entries track spam.
+#----------------------------------------
+entries_track_spam = gb_entries_track_spam.dat
+
+
+
+
+# ***********************
+# SUBSECTION:       admin
+# ***********************
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# the storage of admin data.
+#
+########
+#$level=2
+#$identifier=admin
+########
+
+#--------------------------------------
+# Filename: Admin banned words entries.
+#--------------------------------------
+banned_words = admin_banned_words.dat
+
+#---------------------------------
+# Filename: Admin IP-bans entries.
+#---------------------------------
+banned_ips = admin_banned_ips.dat
+
+#---------------------------------
+# Filename: Admin session entries.
+#---------------------------------
+session_entries = admin_session.dat
+
+
+
+
+
+
+
+
+
+
+# =======================
+# SECTION:          paths
+# =======================
+# Comment:
+# 같같같같
+# Includes paths concerning the
+# usage of external system programs.
+#
+########
+#$level=1
+#$identifier=path
+########
+
+#------------------------
+# Path: Sendmail program.
+#------------------------
+sendmail = /usr/sbin/sendmail
+
+#--------------------
+# Path: Ping program.
+#--------------------
+ping = /bin/ping
+
+
+
+
+
+
+
+
+
+
+# ======================
+# SECTION:          urls
+# ======================
+# Comment:
+# 같같같같
+# Includes URL's.
+#
+########
+#$level=1
+#$identifier=url
+########
+
+#--------------------------------
+# URL: The global script address.
+#--------------------------------
+script = http://www.server.com/cgi-bin/guestbook/guestbook.cgi
+
+
+
+
+
+
+
+
+
+
+# ===========================
+# SECTION:          templates
+# ===========================
+# Comment:
+# 같같같같
+# Includes filenames
+# concerning the HTML-templates.
+#
+########
+#$level=1
+#$identifier=template
+########
+
+
+
+
+# *************************
+# SUBSECTION:       general
+# *************************
+# Comment:
+# 같같같같
+# Includes filenames
+# of general templates.
+#
+########
+#$level=2
+#$identifier=general
+########
+
+#----------------------------------
+# Filename: Template general error.
+#----------------------------------
+error = general_error.html
+
+
+
+
+# ***************************
+# SUBSECTION:       guestbook
+# ***************************
+# Comment:
+# 같같같같
+# Includes filenames
+# of guestbook templates.
+#
+########
+#$level=2
+#$identifier=guestbook
+########
+
+#-----------------------------------
+# Filename: Template guestbook main.
+#-----------------------------------
+main = guestbook_main.html
+
+#---------------------------------------------
+# Filename: Template guestbook list emoticons.
+#---------------------------------------------
+emoticons_list = guestbook_emoticons_list.html
+
+
+
+
+# ***********************
+# SUBSECTION:       admin
+# ***********************
+# Comment:
+# 같같같같
+# Includes filenames
+# of admin templates.
+#
+########
+#$level=2
+#$identifier=admin
+########
+
+#-----------------------------------------------
+# Filename: Template admin-interface login form.
+#-----------------------------------------------
+interface_login_form = admin_interface_login_form.html
+
+#--------------------------------------------------------------------
+# Filename: Template admin-interface guestbook entries control links.
+#--------------------------------------------------------------------
+guestbook_entries_control_links = admin_gb_entries_control_links.html
+
+#----------------------------------------------
+# Filename: Template admin-interface ping link.
+#----------------------------------------------
+ping_link = admin_ping_link.html
+
+#----------------------------------------------
+# Filename: Template admin-interface ping user.
+#----------------------------------------------
+ping_user = admin_ping_user.html
+
+#-----------------------------------------------------------
+# Filename: Template admin-interface edit banned words form.
+#-----------------------------------------------------------
+edit_banned_words_form = admin_edit_banned_words_form.html
+
+#-----------------------------------------------------------
+# Filename: Template admin-interface edit banned words form.
+#-----------------------------------------------------------
+edit_banned_ips_form = admin_edit_banned_ips_form.html
+
+#--------------------------------------------------------------
+# Filename: Template admin-interface edit guestbook entry form.
+#--------------------------------------------------------------
+edit_guestbook_entry_form = admin_edit_gb_entry_form.html
+
+#-----------------------------------------------------------------
+# Filename: Template admin-interface comment guestbook entry form.
+#-----------------------------------------------------------------
+comment_guestbook_entry_form = admin_comment_gb_entry_form.html
+
+#-----------------------------------------------------------------------------
+# Filename: Template admin-interface delete guestbook entry verification form.
+#-----------------------------------------------------------------------------
+delete_guestbook_entry_verification_form = admin_delete_gb_entry_verification_form.html
+
+#-----------------------------------------------------
+# Filename: Template admin-interface navigation links.
+#-----------------------------------------------------
+interface_navigation_links = admin_interface_navigation_links.html
+
+
+
+
+# *********************************
+# SUBSECTION:       notifying_email
+# *********************************
+# Comment:
+# 같같같같
+# Includes filenames
+# of notifying email templates.
+#
+########
+#$level=2
+#$identifier=notifying_email
+########
+
+#-----------------------------------------------------------
+# Filename: Template notifying email admin - user new entry.
+#-----------------------------------------------------------
+admin_user_new_entry = notifying_email_admin_user_new_entry.msg
+
+#---------------------------------------------------------
+# Filename: Template notifying email user - admin comment.
+#---------------------------------------------------------
+user_admin_comment = notifying_email_user_admin_comment.msg
+
+
+
+
+
+
+
+
+
+
+# ========================
+# SECTION:          images
+# ========================
+# Comment:
+# 같같같같
+# Includes filenames
+# concerning the images.
+#
+########
+#$level=1
+#$identifier=image
+########
+
+
+
+
+# *************************
+# SUBSECTION:       buttons
+# *************************
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# image buttons.
+#
+########
+#$level=2
+#$identifier=button
+########
+
+
+# .........................
+# SUBSUBSECTION:    general
+# .........................
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# image general buttons.
+#
+########
+#$level=3
+#$identifier=general
+########
+
+#-----------------------------
+# Filename:  New entry button.
+#-----------------------------
+new_entry = new_entry.gif
+
+#--------------------------
+# Filename:  Submit button.
+#--------------------------
+submit = submit.gif
+
+
+# .......................
+# SUBSUBSECTION:    admin
+# .......................
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# image admin buttons.
+#
+########
+#$level=3
+#$identifier=admin
+########
+
+#-------------------------------
+# Filename:  Admin login button.
+#-------------------------------
+login = admin_login.gif
+
+#------------------------------------
+# Filename:  Admin edit entry button.
+#------------------------------------
+edit_entry = admin_edit_entry.gif
+
+#---------------------------------------
+# Filename:  Admin comment entry button.
+#---------------------------------------
+comment_entry = admin_comment_entry.gif
+
+#--------------------------------------
+# Filename:  Admin delete entry button.
+#--------------------------------------
+delete_entry = admin_delete_entry.gif
+
+#------------------------------
+# Filename:  Admin edit button.
+#------------------------------
+edit = admin_edit.gif
+
+#---------------------------------
+# Filename:  Admin comment button.
+#---------------------------------
+comment = admin_comment.gif
+
+#--------------------------------
+# Filename:  Admin delete button.
+#--------------------------------
+delete = admin_delete.gif
+
+
+
+
+# ***************************
+# SUBSECTION:       emoticons
+# ***************************
+# Comment:
+# 같같같같
+# Includes filenames concerning
+# the emoticons.
+#
+########
+#$level=2
+#$identifier=emoticon
+########
+
+#-----------------------------
+# Filename: Big grin emoticon.
+#-----------------------------
+big_grin = big_grin.gif
+
+#-----------------------------
+# Filename: Confused emoticon.
+#-----------------------------
+confused = confused.gif
+
+#-------------------------
+# Filename: Cool emoticon.
+#-------------------------
+cool = cool.gif
+
+#---------------------------
+# Filename: Crying emoticon.
+#---------------------------
+crying = crying.gif
+
+#-------------------------
+# Filename: Eyes emoticon.
+#-------------------------
+eyes = eyes.gif
+
+#----------------------------
+# Filename: General emoticon.
+#----------------------------
+general = general.gif
+
+#------------------------
+# Filename: Mad emoticon.
+#------------------------
+mad = mad.gif
+
+#-----------------------------
+# Filename: Red face emoticon.
+#-----------------------------
+redface = redface.gif
+
+#------------------------
+# Filename: Sad emoticon.
+#------------------------
+sad = sad.gif
+
+#----------------------------
+# Filename: Smile 4 emoticon.
+#----------------------------
+smile4 = smile4.gif
+
+#---------------------------
+# Filename: Tongue emoticon.
+#---------------------------
+tongue = tongue.gif
+
+
+
+
+
+
+
+
+
+
+# ==========================
+# SECTION:          settings
+# ==========================
+# Comment:
+# 같같같같
+# Includes settings.
+#
+########
+#$level=1
+#$identifier=setting
+########
+
+
+
+
+# *************************
+# SUBSECTION:       general
+# *************************
+# Comment:
+# 같같같같
+# Includes settings concerning
+# general issues.
+#
+########
+#$level=2
+#$identifier=general
+########
+
+#-----------------------------
+# General: The guestbook name.
+#-----------------------------
+guestbook_name = Guestbook
+
+
+
+
+# ***********************
+# SUBSECTION:       admin
+# ***********************
+# Comment:
+# 같같같같
+# Includes settings concerning
+# admin issues.
+#
+########
+#$level=2
+#$identifier=admin
+########
+
+#-----------------------
+# Admin: The site title.
+#-----------------------
+site_title = admin interface
+
+#-----------------
+# Admin: The name.
+#-----------------
+name = administrator
+
+#--------------------------
+# Admin: The email address.
+#--------------------------
+email_adress = info@server.net
+
+#-------------------------------
+# Admin: The interface password.
+#-------------------------------
+interface_password = 1234
+
+#-------------------------------
+# Admin: Session random digit 1.
+#-------------------------------
+session_random_digit_1 = 19298311
+
+#-------------------------------
+# Admin: Session random digit 2.
+#-------------------------------
+session_random_digit_2 = 20108912
+
+#------------------------------------------------------------------
+# Admin: The time delay (minutes) until deactivating the interface.
+#------------------------------------------------------------------
+session_runout_time_min = 5
+
+#--------------------------------------------------------------------------
+# Admin: Enable (1) / disable (0) the delete guestbook - verification mode.
+#--------------------------------------------------------------------------
+delete_gb_entry_verification_mode = 1
+
+
+
+
+# ***************************
+# SUBSECTION:       guestbook
+# ***************************
+# Comment:
+# 같같같같
+# Includes settings concerning
+# guestbook issues.
+#
+########
+#$level=2
+#$identifier=guestbook
+########
+
+#---------------------------
+# Guestbook: The site title.
+#---------------------------
+site_title = user interface
+
+#--------------------------------------
+# Guestbook: The DBase value separator.
+#--------------------------------------
+dbase_value_separator = ;
+
+#-----------------------------------------
+# Guestbook: The DBase subvalue separator.
+#-----------------------------------------
+dbase_subvalue_separator = ,
+
+#----------------------------------------------------------
+# Guestbook: The HTML breakline (used for newline parsing).
+#----------------------------------------------------------
+html_breakline = <br>
+
+#----------------------------------------------------------
+# Guestbook: Enable (1) / disable (0) the use of HTML-tags.
+#----------------------------------------------------------
+html_mode = 0
+
+#----------------------------------------------------------
+# Guestbook: Enable (1) / disable (0) the use of emoticons.
+#----------------------------------------------------------
+emoticons_mode = 0
+
+#-------------------------------------------------------------------
+# Guestbook: Enable (1) / disable (0) the replacing of banned words.
+#-------------------------------------------------------------------
+replace_banned_words_mode = 1
+
+#------------------------------------------------
+# Guestbook: The replacing item for banned words.
+#------------------------------------------------
+replacing_item_banned_words = *
+
+#-------------------------------------------------------------------
+# Guestbook: Enable (1) / disable (0) the limiting of track entries.
+#-------------------------------------------------------------------
+limit_entries_track_mode = 1
+
+#---------------------------------------------------
+# Guestbook: The maximum of guestbook track entries.
+#---------------------------------------------------
+track_entries_limit = 10
+
+#-----------------------------------------------------------------
+# Guestbook: Enable (1) / disable (0) the use of notifying emails.
+#-----------------------------------------------------------------
+notifying_email_mode = 1
+
+#---------------------------------------------------------------
+# Guestbook: The waiting delay (minutes) for a 2nd entry adding.
+#---------------------------------------------------------------
+spam_border_time = 2
+
+#---------------------------------------------------------------------
+# Guestbook: The amount of guestbook entries which are shown per page.
+#---------------------------------------------------------------------
+entries_max_page = 4
+
+
+
+
+# *********************************
+# SUBSECTION:       notifying email
+# *********************************
+# Comment:
+# 같같같같
+# Includes settings concerning
+# notifying emails.
+#
+########
+#$level=2
+#$identifier=notifying_email
+########
+
+
+# .................................
+# SUBSUBSECTION:    email-addresses
+# .................................
+# Comment:
+# 같같같같
+# Includes all settings
+# concerning notifying email-addresses.
+#
+########
+#$level=3
+#$identifier=email_address
+########
+
+#-----------------------------------------------------------------
+# Notifying email: The email adress of the notifying mails sender.
+#-----------------------------------------------------------------
+sender = info@server.net
+
+
+# ................................
+# SUBSUBSECTION:    email-subjects
+# ................................
+# Comment:
+# 같같같같
+# Includes settings concerning
+# notifying email-subjects.
+#
+########
+#$level=3
+#$identifier=email_subjects
+########
+
+#-------------------------------------------------------------------------
+# Notifying email: The subject of the admin new user entry notifying mail.
+#-------------------------------------------------------------------------
+admin_new_user_entry = New guestbook entry
+
+#-------------------------------------------------------------------------
+# Notifying email: The subject of the admin new user entry notifying mail.
+#-------------------------------------------------------------------------
+user_admin_comment = Commented guestbook entry
+
+
+
+
+
+
+
+
+
+
+# ==============================
+# SECTION:          descriptions
+# ==============================
+# Comment:
+# 같같같같
+# Includes descriptions.
+#
+########
+#$level=1
+#$identifier=description
+########
+
+
+
+
+# *************************
+# SUBSECTION:       general
+# *************************
+# Comment:
+# 같같같같
+# Includes descriptions
+# concerning general issues.
+#
+########
+#$level=2
+#$identifier=general
+########
+
+#-----------------------------------
+# Guestbook: Entry time-period "am".
+#-----------------------------------
+time_period_am = am
+
+#-----------------------------------
+# Guestbook: Entry time-period "pm".
+#-----------------------------------
+time_period_pm = pm
+
+
+
+
+# ***************************
+# SUBSECTION:       guestbook
+# ***************************
+# Comment:
+# 같같같같
+# Includes descriptions
+# concerning guestbook issues.
+#
+########
+#$level=2
+#$identifier=guestbook
+########
+
+#------------------------------
+# Guestbook: HTML mode enabled.
+#------------------------------
+html_mode_enabled = enabled
+
+#-------------------------------
+# Guestbook: HTML mode disabled.
+#-------------------------------
+html_mode_disabled = disabled
+
+#-----------------------------------
+# Guestbook: Emoticons mode enabled.
+#-----------------------------------
+emoticons_mode_enabled = enabled
+
+#------------------------------------
+# Guestbook: Emoticons mode disabled.
+#------------------------------------
+emoticons_mode_disabled = disabled
+
+#-------------------------------------------
+# Guestbook: Counter none guestbook entries.
+#-------------------------------------------
+counter_none_guestbook_entries = none entries
+
+#------------------------------------
+# Guestbook: Counter guestbook entry.
+#------------------------------------
+counter_guestbook_entry = entry
+
+#--------------------------------------
+# Guestbook: Counter guestbook entries.
+#--------------------------------------
+counter_guestbook_entries = entries
+
+#---------------------------------
+# Guestbook: Entry comment footer.
+#---------------------------------
+entry_comment_footer = commented by $config{'setting'}{'admin'}{'name'} at
+
+#------------------------------
+# Guestbook: Entry edit footer.
+#------------------------------
+entry_edit_footer = edited by $config{'setting'}{'admin'}{'name'} at
+
+#-----------------------------------------
+# Guestbook: Entry author - online status.
+#-----------------------------------------
+entry_author_online_status = online
+
+#------------------------------------------
+# Guestbook: Entry author - offline status.
+#------------------------------------------
+entry_author_offline_status = offline
+
+#----------------------------------------------------
+# Guestbook: Entries navigate link previous (target).
+#----------------------------------------------------
+entries_navigate_link_previous_target = previous page
+
+#-------------------------------------------------------
+# Guestbook: Entries navigate link previous (no target).
+#-------------------------------------------------------
+entries_navigate_link_previous_no_target = -
+
+#------------------------------------------------
+# Guestbook: Entries navigate link next (target).
+#------------------------------------------------
+entries_navigate_link_next_target = next page
+
+#---------------------------------------------------
+# Guestbook: Entries navigate link next (no target).
+#---------------------------------------------------
+entries_navigate_link_next_no_target = -
+
+
+
+
+
+
+
+
+
+
+# ==========================
+# SECTION:          messages
+# ==========================
+# Comment:
+# 같같같같
+# Includes messages.
+#
+########
+#$level=1
+#$identifier=message
+########
+
+
+
+
+# *************************************
+# SUBSECTION:       new guestbook entry
+# *************************************
+# Comment:
+# 같같같같
+# Includes messages concerning
+# new guestbook entries.
+#
+########
+#$level=2
+#$identifier=guestbook_new_entry
+########
+
+#------------------------------------
+# Guestbook new entry: Spam detected.
+#------------------------------------
+spam_detected = You have not been waiting for $config{'setting'}{'guestbook'}{'spam_border_time'} minutes since you've last posted.
+
+#--------------------------------
+# Guestbook new entry: IP banned.
+#--------------------------------
+ip_banned = Your IP-adress has been banned for further posting.
+
+#-----------------------------------
+# Guestbook new entry: Name missing.
+#-----------------------------------
+name_missing = Your name is missing.
+
+#------------------------------------
+# Guestbook new entry: Email missing.
+#------------------------------------
+email_missing = Your email-address is missing.
+
+#-------------------------------------------
+# Guestbook new entry: Email invalid format.
+#-------------------------------------------
+email_invalid_format = Your email-address has an invalid format.
+
+#--------------------------------------
+# Guestbook new entry: Website missing.
+#--------------------------------------
+website_missing = Your website-address is missing.
+
+#---------------------------------------------
+# Guestbook new entry: Website invalid format.
+#---------------------------------------------
+website_invalid_format = Your website-address has an invalid format.
+
+#--------------------------------------
+# Guestbook new entry: Message missing.
+#--------------------------------------
+message_missing = Your message is missing.
+
+#-----------------------------------------------------
+# Guestbook new entry: New entry created successfully.
+#-----------------------------------------------------
+created_successfully = A new entry has been created successfully.
+
+
+
+
+# *****************************
+# SUBSECTION:       admin login
+# *****************************
+# Comment:
+# 같같같같
+# Includes messages concerning
+# the admin login.
+#
+########
+#$level=2
+#$identifier=admin_login
+########
+
+#-----------------------------
+# Admin login: User not valid.
+#-----------------------------
+uid_not_valid = The submitted user is not accepted.
+
+#---------------------------------
+# Admin login: Passwort not valid.
+#---------------------------------
+password_not_valid = The submitted password is not accepted.
+
+
+
+
+# *******************************
+# SUBSECTION:       admin session
+# *******************************
+# Comment:
+# 같같같같
+# Includes messages concerning
+# the admin session.
+#
+########
+#$level=2
+#$identifier=admin
+########
+
+#--------------------------------
+# Admin session: Session invalid.
+#--------------------------------
+session_invalid = You aren't privileged to use the admin interface.
+
+
+
+
+# *****************************************
+# SUBSECTION:       admin edit banned words
+# *****************************************
+# Comment:
+# 같같같같
+# Includes messages concerning the
+# admin edit banned words feature.
+#
+########
+#$level=2
+#$identifier=admin_edit_banned_words
+########
+
+#-----------------------------------------------
+# Admin edit banned words: No action tag submit.
+#-----------------------------------------------
+no_action_tag_submit = No action tag has been submitted.
+
+#----------------------------------------------------
+# Admin edit banned words: No new banned word submit.
+#----------------------------------------------------
+new_banned_word_not_defined = No new banned word has been submitted.
+
+#-------------------------------------------------------
+# Admin edit banned words: Delete banned word selection.
+#-------------------------------------------------------
+delete_banned_word_selection = ....
+
+#----------------------------------------------------------
+# Admin edit banned words: Delete banned word no selection.
+#----------------------------------------------------------
+delete_banned_word_no_selection = Select your banned word to be removed by using the menu.
+
+#--------------------------------------------------------
+# Admin edit banned words: Delete submit word successful.
+#--------------------------------------------------------
+delete_submit_banned_word_successful = The banned word has been removed successfully.
+
+#------------------------------------------------------------
+# Admin edit banned words: Submit new banned word successful.
+#------------------------------------------------------------
+submit_new_banned_word_successful = The new banned word has been added successfully.
+
+
+
+
+# ****************************************
+# SUBSECTION:       admin edit banned IP's
+# ****************************************
+# Comment:
+# 같같같같
+# Includes messages concerning the
+# admin edit banned IP's feature.
+#
+########
+#$level=2
+#$identifier=admin_edit_banned_ips
+########
+
+#----------------------------------------------
+# Admin edit banned IP's: No action tag submit.
+#----------------------------------------------
+no_action_tag_submit = No action tag has been submitted.
+
+#---------------------------------------------------
+# Admin edit banned IP's: New banned IP not defined.
+#---------------------------------------------------
+new_banned_ip_submit_not_defined = No new banned IP has been submitted.
+
+#------------------------------------------------------
+# Admin edit banned IP's: New banned IP invalid format.
+#------------------------------------------------------
+new_banned_ip_invalid_format = The submitted IP has an invalid format.
+
+#----------------------------------------------------
+# Admin edit banned IP's: Delete banned IP selection.
+#----------------------------------------------------
+delete_banned_ip_selection = ....
+
+#-------------------------------------------------------
+# Admin edit banned IP's: Delete banned IP no selection.
+#-------------------------------------------------------
+delete_banned_ip_no_selection = Select your banned IP to be removed by using the menu.
+
+#-----------------------------------------------------
+# Admin edit banned IP's: Delete banned IP successful.
+#-----------------------------------------------------
+delete_banned_ip_submit_successful = The banned IP has been removed successfully.
+
+#---------------------------------------------------------
+# Admin edit banned IP's: New banned IP submit successful.
+#---------------------------------------------------------
+new_banned_ip_submit_successful = The new banned IP has been added successfully.
+
+
+
+
+
+
+

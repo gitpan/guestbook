@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME - $SITE_TITLE</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<script language="javascript">
+<!--
+function openwindow(url,height,width)
+{
+window1=window.open(url,null,"height="+height+",width="+width+",resizable=no,status=no,toolbar=no,menubar=no,location=no");window1.focus();
+
+window1.moveTo(0 + screen.availWidth / 10, 0 + screen.availHeight / 5);
+window1.focus();
+}
+//-->
+</script>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+<form action="$SCRIPT_URL_INVISIBLE" method="post">
+<input name="action" type="hidden" value="guestbook_new_entry">
+$ADMIN_INTERFACE_MODE_TAG_INVISIBLE
+$ADMIN_SID_TAG_INVISIBLE
+<table border="0" width="436">
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Name</font></td>
+    <td width="394">
+      <input name="guestbook_new_entry_name_submit" size="30" value="$NEW_ENTRY_NAME_SUBMIT">
+    </td>
+  </tr>
+  <tr>
+    <td valign"bottom" width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Email</font></td>
+    <td width="394">
+      <input name="guestbook_new_entry_email_submit" size="30" value="$NEW_ENTRY_EMAIL_SUBMIT">
+    </td>
+  </tr>
+  <tr>
+    <td valign="bottom" width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Website</font></td>
+    <td width="394">
+      <input name="guestbook_new_entry_website_submit" size="30" value="$NEW_ENTRY_WEBSITE_SUBMIT">
+    </td>
+  </tr>
+  <tr>
+    <td height="198" valign="top" width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Message</font></td>
+    <td height="198" width="394">
+      <textarea cols="40" name="guestbook_new_entry_message_submit" rows="12">$NEW_ENTRY_MESSAGE_SUBMIT</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td align="left" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">HTML
+      is $GUESTBOOK_HTML_MODE | <A
+      href="javascript:openwindow('$SCRIPT_URL_INVISIBLE?action=guestbook_emoticons_list',300,150)">Emoticons</A>
+      are $GUESTBOOK_EMOTICONS_MODE<BR>
+      </font> </td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td align="left" width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td align="left" width="394"><font face="Arial, Helvetica, sans-serif" size="1" 		color="#000066">$STATUS_MESSAGES</font>
+    </td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td align="left" width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td align="left" width="394">
+      <input type="image" src="$ABSOLUTE_PATH_BUTTON">
+    </td>
+  </tr>
+  <tr>
+    <td width="186" height="87">&nbsp;</td>
+    <td align="left" width="394" height="87"></td>
+  </tr>
+  <td width="186">
+  <td width="394"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"></form></font>
+  <tr>
+    <td width="186" height="20">&nbsp;</td>
+    <td bgcolor="#666666" bordercolor="#0bde00" width="394" height="20"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF">$MESSAGE_COUNTER_GB_ENTRIES</font></td>
+    <td bgcolor="#666666" bordercolor="#0bde00" width="228" height="20">
+      <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$ADMIN_INTERFACE_ACCESS_CONTROL
+        </font> </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bordercolor="#0bde00" width="394" valign="top">$ADMIN_INTERFACE_NAVIGATION_LINKS</td>
+    <td bordercolor="#0bde00" width="228">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186" height="20">&nbsp;</td>
+    <td bgcolor="#999999" width="394" height="20">$ADMIN_GB_ENTRIES_CONTROL_LINKS</td>
+  </tr>
+  <tr>
+    <td width="186" height="20">&nbsp;</td>
+    <td bgcolor="#999999" width="394" height="20"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$ADMIN_GB_ENTRY_PING_LINK</font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bgcolor="#cccccc" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_IDENTIFIER
+      posted at $GB_ENTRY_TIME </font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bgcolor="#cccccc" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a
+      href="$GB_ENTRY_WEBSITE" target="_blank">$GB_ENTRY_WEBSITE</a></font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bgcolor="#cccccc" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_MESSAGE</font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bgcolor="#cccccc" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i>$GB_ENTRY_COMMENT<br>
+      <br>
+      </i>$GB_ENTRY_COMMENT_FOOTER $GB_ENTRY_COMMENT_TIME<i><br>
+      </i></font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td bgcolor="#cccccc" width="394"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">$GB_ENTRY_EDIT_STATUS_FOOTER
+      $GB_ENTRY_EDIT_STATUS_TIME</font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td colspan="2">
+      <hr color="#333333">
+    </td>
+  </tr>
+  <tr>
+    <td width="186" height="86">&nbsp;</td>
+    <td width="394" height="86">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394">&nbsp;</td>
+  </tr>
+  <!--START: DO NOT MODIFY THE TAG "ADMIN_NAVIGATE_LINKS"! -->
+  <td width="186"><admin_navigate_links>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394" bgcolor="#666666"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF">$GB_ENTRIES_NAVIGATE_LINK_PREVIOUS
+      | $GB_ENTRIES_NAVIGATE_LINK_NEXT</font> </td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394" bgcolor="#666666"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF">powered 
+      by <A
+      href="$AUTHOR_HOME_URL"
+      target=_blank>$SCRIPT_NAME</A></font></td>
+  </tr>
+  <tr>
+    <td width="186">&nbsp;</td>
+    <td width="394"></td>
+  </tr>
+</table>
+</admin_navigate_links>
+<!--END: DO NOT MODIFY THE TAG "ADMIN_NAVIGATE_LINKS"! -->
+</BODY>
+</HTML>

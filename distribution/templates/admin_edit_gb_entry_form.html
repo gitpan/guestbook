@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME- $SITE_TITLE - edit guestbook entry</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+<form action="$SCRIPT_URL_INVISIBLE" method="post">
+	<table border="0" width="436">
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td width="317">
+        		<input type="hidden" name="action" value="admin_edit_gb_entry_submit">
+        		<input type="hidden" name="admin_interface_mode" value="1">
+        		<input type="hidden" name="sid" value="$SID_INVISIBLE">
+        		<input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID">
+        		<input type="hidden" name="admin_edit_gb_entry_time_submit" value="$GB_ENTRY_TIME">
+        		<input type="hidden" name="admin_edit_gb_entry_ip_submit" value="$GB_ENTRY_IP">
+				<input type="hidden" name="admin_edit_gb_entry_comment_submit" value="$GB_ENTRY_COMMENT">
+      		</td>
+    	</tr>
+    	<tr>
+      		<td valign=bottom width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Name</font></td>
+      		<td width="317">
+      			<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+        		<input name=admin_edit_gb_entry_name_submit size="30" value="$GB_ENTRY_NAME">
+        		</font>
+        	</td>
+    	</tr>
+    	<tr>
+      		<td valign=bottom width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Email</font></td>
+      		<td width="317">
+      			<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+        		<input name=admin_edit_gb_entry_email_submit size="30" value="$GB_ENTRY_EMAIL">
+        		</font>
+        	</td>
+    	</tr>
+    	<tr>
+      		<td valign=bottom width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Website</font></td>
+      		<td width="317">
+      			<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+        		<input name=admin_edit_gb_entry_website_submit size="30" value="$GB_ENTRY_WEBSITE">
+        		</font>
+        	</td>
+    	</tr>
+    	<tr>
+      		<td height="198" valign=top width="186"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Message</font></td>
+      		<td height="198" width="317">
+      			<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+        		<textarea cols="40" rows="12" name=admin_edit_gb_entry_message_submit>$GB_ENTRY_MESSAGE</textarea>
+        		</font>
+        	</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">&nbsp;</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">&nbsp;</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td align=left width="317">
+        		<input type="image" src="$ABSOLUTE_PATH_BUTTON">
+      		</td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+      		<td width="317"></td>
+    	</tr>
+    	<tr>
+      		<td width="186">&nbsp;</td>
+
+      <td width="317"><font face="Arial, Helvetica, sans-serif" size="2"><a href="javascript:history.back()"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">return</font></a></font>
+      </td>
+    	</tr>
+  </table>
+</form>
+</body>
+</html>

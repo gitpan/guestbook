@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME - ban words</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+</head>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+<form method="post" action="$SCRIPT_URL_INVISIBLE">
+	<input type="hidden" name="sid" VALUE="$SID_INVISIBLE">
+	<input type="hidden" name="action" VALUE="admin_edit_banned_words_submit">
+	<table width="600">
+  		<tr>
+    		<td width="15" valign="bottom">&nbsp;</td>
+    		<td width="15" valign="bottom">&nbsp;</td>
+    		<td width="15" valign="bottom">&nbsp;</td>
+    		<td width="541">&nbsp;</td>
+  		</tr>
+  		<tr>
+    		<td width="15" valign="bottom">&nbsp;</td>
+    		<td width="15" valign="bottom"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Add</font></td>
+    		<td width="15" valign="bottom">&nbsp;</td>
+    		<td width="541">
+      			<input type="text" name="admin_new_banned_word_submit" value="$NEW_BANNED_WORD">
+    		</td>
+  		</tr>
+  		<tr valign="bottom">
+    		<td width="15">&nbsp;</td>
+    		<td width="15"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Remove</font></td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left"> <br>
+      			<select name="admin_del_banned_word_submit">
+        			<option>$SELECT_MSG</option>$BANNED_WORD
+      			</select>
+    		</td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">&nbsp;</td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">
+    			<font size="1" face="Verdana, Arial, Helvetica, sans-serif">
+      			<input type="radio" name="admin_edit_banned_words_action" value="add">
+        &nbsp;<i>Action:</i> <b>add</b><br>
+				</font>
+			</td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">
+    			<font size="1" face="Verdana, Arial, Helvetica, sans-serif">
+      			<input type="radio" name="admin_edit_banned_words_action" value="del">
+        &nbsp;<i>Action:</i> <b>remove<br>
+        </b> </font> </td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">&nbsp;</td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">
+    			<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000066">$STATUS_MESSAGE</font>
+    		</td>
+  		</tr>
+  		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541" align="left">&nbsp;</td>
+  		</tr>
+ 		<tr>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="15">&nbsp;</td>
+    		<td width="541"><input type="image" src="$ABSOLUTE_PATH_BUTTON"></td>
+    	</tr>
+		</table>
+     </form>
+</body>
+</html>

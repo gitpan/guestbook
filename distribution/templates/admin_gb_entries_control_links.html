@@ -1,0 +1,36 @@
+<table width="31%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td width="30%" height="14"> 
+      <form name="form1" method="post" action="$SCRIPT_URL_INVISIBLE">
+      	<input type="image" src="$ABSOLUTE_PATH_BUTTON_1">
+        <br>
+        <input type="hidden" name="sid" value="$SID_INVISIBLE">
+		<input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID">
+        <input type="hidden" name="action" value="admin_edit_gb_entry_form">
+        <input type="hidden" name="admin_interface_mode2" value="1">
+      </form>
+    </td>
+    <td width="29%" height="14"> 
+      <form name="form2" method="post" action="$SCRIPT_URL_INVISIBLE">
+        &nbsp; 
+        <input type="image" src="$ABSOLUTE_PATH_BUTTON_2">
+        <br>
+        <input type="hidden" name="action" value="admin_comment_gb_entry_form">
+        <input type="hidden" name="admin_interface_mode" value="1">
+        <input type="hidden" name="sid" value="$SID_INVISIBLE">
+        <input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID">
+      </form>
+    </td>
+    <td width="41%" height="14">
+      <form name="form3" method="post" action="$SCRIPT_URL_INVISIBLE">
+        &nbsp; 
+        <input type="image" src="$ABSOLUTE_PATH_BUTTON_3">
+        <br>
+        <input type="hidden" name="action" value="admin_delete_gb_entry">
+        <input type="hidden" name="admin_interface_mode" value="1">
+        <input type="hidden" name="sid" value="$SID_INVISIBLE">
+        <input type="hidden" name="guestbook_entry_id" value="$GUESTBOOK_ENTRY_ID">
+      </form>
+    </td>
+  </tr>
+</table>

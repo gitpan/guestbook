@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>$GUESTBOOK_NAME - $SITE_TITLE - login</title>
+</head>
+<body bgcolor="#666678" text="#000000" link="#333333" vlink="#333333" alink="#333333">
+<form method="post" action="$SCRIPT_URL_INVISIBLE">
+	<input type="hidden" name="action" value="admin_interface">
+	<input type="hidden" name="admin_interface_mode" value="1">
+
+  <table width="600" border="0">
+    <tr>
+      <td width="58">&nbsp;</td>
+      <td width="532">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="58" valign="bottom"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Name</font></td>
+      <td width="532">
+        <input type="text" name="admin_interface_login_uid_submit" size="15" value="$LOGIN_UID_SUBMIT">
+      </td>
+    </tr>
+    <tr>
+      <td width="58" valign="bottom"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Password</font></td>
+      <td width="532">
+        <input type="password" name="admin_interface_login_password_submit" size="15" value="$LOGIN_PASSWORD_SUBMIT">
+      </td>
+    </tr>
+    <tr>
+      <td width="58">&nbsp;</td>
+      <td width="532">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="58" valign="bottom"></td>
+      <td width="532"><font size="1" color="#000066" face="Arial, Helvetica, sans-serif">$STATUS_MESSAGES</font></td>
+    </tr>
+    <tr>
+      <td width="58" valign="bottom"></td>
+      <td width="532">&nbsp; </td>
+    </tr>
+    <tr>
+      <td width="58" valign="bottom"></td>
+      <td width="532">
+        <input type="image" src="$ABSOLUTE_PATH_BUTTON">
+      </td>
+    </tr>
+    <tr>
+      <td width="58">&nbsp;</td>
+      <td width="532">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="58">&nbsp;</td>
+      <td width="532"><font face="Arial, Helvetica, sans-serif" size="2"><a href="$SCRIPT_URL_INVISIBLE"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">return</font></a></font></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,1008 @@
+<html>
+<head>
+<title>User manual - Steven's guestbook - configuration &amp; installation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#666666" vlink="#666666" alink="#666666">
+<table width="100%" border="0">
+  <tr>
+    <td width="5%">&nbsp;</td>
+    <td width="95%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5%">&nbsp;</td>
+    <td width="95%">
+      <table width="75%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td colspan="4"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b><font color="#000000">Configuration 
+            &amp; Installation</font></b></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"> 
+            <p><br>
+              <br>
+            </p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="18"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Overview</b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="top_overview"></a></font></td>
+          <td colspan="2" height="18"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">01.) 
+            <a href="#step_download_software">download the required system software</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">02.) 
+            <a href="#step_configure_install_software">configure &amp; install 
+            the required system software</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">03.) 
+            <a href="#step_download_script">download the script</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">04.) 
+            <a href="#step_decompress_packed_script">decompress the packed script</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">05.) 
+            <a href="#step_adjust_shebang_line">adjust the shebang-line</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">06.) 
+            <a href="#step_adjust_configuration_file">adjust the configuration 
+            file</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">07.) 
+            <a href="#step_ren_relocate_dirs_files">eventually rename &amp; relocate 
+            directories and files</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">08.) 
+            <a href="#step_adjust_html_templates">adjust the HTML templates</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">09.)<a href="#step_upload_script"> 
+            upload the script</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">10.) 
+            <a href="#step_set_permissions">set the permissions</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">11.) 
+            <a href="#step_create_configuration">create the configuration</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">12.) 
+            <a href="#step_finishment_bugtracking">finishment (&amp; bugtracking)</a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Steps</b></font></td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_download_software"></a>01.) 
+            download the required system software</font> <font face="Verdana, Arial, Helvetica, sans-serif" size="1">(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"> </td>
+          <td width="71%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1">See 
+            the <a href="../b_requirements/index.html">requirements page</a> therefore.</font> 
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"> </td>
+          <td width="71%"> </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"></td>
+          <td width="71%"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_configure_install_software"></a>02.) 
+            configure &amp; install the required system software</font> <font face="Verdana, Arial, Helvetica, sans-serif" size="1">(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"> </td>
+          <td width="71%"> <font size="1" face="Verdana, Arial, Helvetica, sans-serif">This 
+            may include installments or upgrades of required software.</font> 
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%" height="18">&nbsp;</td>
+          <td width="14%" height="18">&nbsp;</td>
+          <td width="9%" height="18"> </td>
+          <td width="71%" height="18"> </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"></td>
+          <td width="71%"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_download_script"></a>03.) 
+            download the script</font> <font face="Verdana, Arial, Helvetica, sans-serif" size="1">(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><b><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Sources:</font></b></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;&nbsp;- 
+            <a href="http://search.cpan.org/~schubiger" target="_blank"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Guestbook v. 0.3b</font></a></font></td>
+        </tr>
+        <tr> 
+          <td width="6%"><b></b></td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_decompress_packed_script"></a>04.) 
+            decompress the packed script (<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_file_listing.jpg" width="374" height="17"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_context_menu_decompress_script.jpg" width="352" height="99"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_adjust_shebang_line"></a>05.) 
+            adjust the shebang-line (<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Open 
+            the guestbook script and adjust the first line (the so-called shebang 
+            line) to match the location of your perl interpreter (usually /usr/bin/perl). 
+            The #! at the beginning is not to be omitted.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_directory_selected_stevens_guestbook.jpg" width="377" height="30"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_directory_selected_distribution.jpg" width="351" height="33"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_file_listing_selected_script.jpg" width="349" height="72"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_editor_script_shebang_line.jpg" width="155" height="22"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">The 
+            same procedure applys to the &quot;create_config.pl&quot; file <br>
+            which you may find within the create_config directory.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_adjust_configuration_file"></a>06.) 
+            adjust the configuration file<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1">The 
+              configuration file <font size="2"><code><font size="3">&lt;guestbook.dat&gt;</font></code></font> 
+              has been divided in sections &amp; subsections with the main intention 
+              to dramatically simplify the process of adjusting the configuration 
+              &amp; it's setting to equal your needs. Lines beginning with a # 
+              are expressly important &amp; should not be modified since they 
+              operate as kind of a placeholder, so don't touch them.<br>
+              <br>
+              Changes may be made to the lines in the following format:<br>
+              <code><font size="2">data = data</font></code><br>
+              <br>
+              While here the left side of the assignment is of interest to the 
+              perl parser (which you shouldn't touch expressly either), the right 
+              side should catch your attention though; all section and their belonging 
+              subs come along with a short description which you should read in 
+              case you intend to change anything within this file. Be aware that 
+              if you, for example, apply a change to a filename/directory/path 
+              setting you will most likely have to rename it on your harddisk/webspace 
+              too. The process of creating a new configuration file is due again 
+              (s. pt. 11- <a href="#step_create_configuration">&quot;create the 
+              configuration&quot;</a> therefore).<br>
+              <br>
+              P.S: The spaces between the value/key and the assignment operator 
+              are <b>necessary</b>. So if you will intentionally omit them, you 
+              will run a most likely buggy-acting script.<br>
+              </font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_editor_script_configuration_file.jpg" width="200" height="255" border="0"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_editor_script_configuration_file_single_entry.jpg" width="233" height="65"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_ren_relocate_dirs_files"></a>07.) 
+            eventually rename &amp; relocate directories and files<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">For 
+            subsequent evolving configuration changes, see the explanation above.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_file_listing_ren_files_and_directories.jpg" width="350" height="74"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_adjust_html_templates"></a>08.) 
+            adjust the HTML templates<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1">The 
+              HTML-templates (directory: <font size="3"><code>templates</code></font>) 
+              which come along with the guestbook script may also be adjusted 
+              to match your needs; but be careful to don't unintentionally remove 
+              and/or modify the name of a placeholder, for example:<br>
+              <br>
+              <code><font size="3">$GUESTBOOK_HTML_MODE</font></code><br>
+              &nbsp;</font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><br>
+              On the other hand, you're allowed to reformat the placeholders, 
+              as you wish, but ensure that the placeholder will not vanish out 
+              of your source. You may even change their position within the code.<br>
+              <br>
+              Placeholders with a <font size="2"><code><font size="3">_INVISIBLE</font></code></font> 
+              as suffix, aren't to be altered their position, or the script will 
+              most likely lose some of its essential functionality; leave them 
+              untouched. Form elements aren't to be altered their names either.<br>
+              <br>
+              You may change the remaining HTML bits &amp; parts as you like, 
+              as long as you keep the copyright &amp; author notice intact at 
+              the bottom.<br>
+              <br>
+              </font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_html_editor_wysiwyg_template.jpg" width="332" height="415"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_html_editor_wysiwyg_template_placeholder.jpg" width="293" height="24"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_upload_script"></a>09.) 
+            upload the script<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Open 
+            your desired FTP-client &amp; access your webspace account; then upload 
+            all files &amp; directories within the &quot;distribution&quot; directory 
+            to a path on the server which <br>
+            <br>
+            a) has the allowance to execute cgi scripts (most often the &quot;cgi-bin&quot;)<br>
+            b) is read- &amp; writable for the server belonging HTTP webserver<br>
+            <br>
+            Ensure first that the files are transferred in ASCII-mode.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_host_quick_connect.jpg" width="418" height="20"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_directory_listing.jpg" width="187" height="92"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_set_permissions"></a>10.) 
+            set the permissions<i> </i>(<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%" height="22">&nbsp;</td>
+          <td width="14%" height="22">&nbsp;</td>
+          <td width="9%" height="22">&nbsp;</td>
+          <td width="71%" height="22"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Open 
+            the create_config directory &amp; change the permissions (short: &quot;chmod&quot;) 
+            of the &quot;create_config.pl&quot; 755.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_directory_select_create_config.jpg" width="187" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_set_permissions_create_config.jpg" width="326" height="84"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Open 
+            the main directory &amp; chmod the &quot;guestbook.cgi&quot; 755.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_set_permissions_script.jpg" width="178" height="27"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Open 
+            the data directory &amp; chmod all files 666.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_ftp_set_permissions_data_dir.jpg" width="194" height="77"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a name="step_create_configuration"></a> 
+            11.) create the configuration (<a href="#top_overview">overview</a>)</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Access 
+            the create config script as shown below. </font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_browser_url_create_config.jpg" width="311" height="21"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">If 
+            everything went right &amp; no errors were determined, you will have 
+            such output printed to your browser declining the count of lines that 
+            were parsed.</font></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"><img src="images/screenshots/win32_browser_results_create_config.jpg" width="206" height="126"></td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%"><a name="step_finishment_bugtracking"></a></td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1">The 
+              guestbook script should be set now. If you encounter any problems, 
+              <br>
+              <br>
+              1.) reread the instructions carefully again<br>
+              2.) follow the recommended steps<br>
+              3.) recheck the configuration file <b>carefully </b>- if no necessary 
+              changes were omitted.<br>
+              4.) recheck the correctness of the shebang line<br>
+              5.) recheck the applied permissions<br>
+              6.) have you transferred the script &amp; its files in ASCII-mode?<br>
+              7.) consult the <a href="../d_troubleshooting/index.html">troubleshooting 
+              section</a> &amp; its FAQ's.</font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="6%">&nbsp;</td>
+          <td width="14%">&nbsp;</td>
+          <td width="9%">&nbsp;</td>
+          <td width="71%">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
